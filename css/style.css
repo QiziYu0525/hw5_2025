@@ -11,7 +11,7 @@
     }
 }
 /* Set animation duriation and loading condition */
-.logo {
+#logo {
     animation: mymove 5s forwards;
 }
 
@@ -160,17 +160,24 @@ main {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 180px;
     }
     .pricing {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        flex-wrap: nowrap;
         align-items: flex-end;
     }
     .card {
         border: 2px solid #45ADDD;
         flex-basis: 325px;
     }
+
+    h2#gallery {
+        display: none;
+    }
+
     .gallery {
         display: none;
     }
