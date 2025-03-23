@@ -1,0 +1,185 @@
+/* Animate keyframe transition */
+@keyframes mymove {
+    from {
+        width: 25px;
+        opacity: 0;
+    }
+
+    to {
+        width: 475px;
+        opacity: 1;
+    }
+}
+/* Set animation duriation and loading condition */
+.logo {
+    animation: mymove 5s forwards;
+}
+
+/* Body style */
+body {
+    font-family: "Poppins", serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+
+/* Set header to use flex */
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Set nav_links class to use flex and adjust flex-direction. */
+.nav_links {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Unify the color of link before and after visit */
+a:link, a:visited {
+    color: #288088;
+}
+
+
+/* Specically style the header of card. */
+.card>header {
+    background: #288088;
+    border: 2px solid #45ADAD;
+    padding: 20px 0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+/* Style card class*/
+.card {
+    max-width:450px;
+    margin: 12px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 0 0 25px 0;
+    flex: 1 1 450px;
+    /* hide the uncovered part of card */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+/* Pricing class style */
+.pricing {
+    min-height: 475px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Style the image of gallery class */
+.gallery img {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+/* Gallery class style */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 900px) {
+/* To place the logo and the navlinks in one row to two ends. */
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+/* Pricing and card class layout */
+.pricing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* To adjust new width of card */
+.card {
+    margin: 12px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 0 0 25px 0;
+    flex: 1 1 275px;
+    max-width: 275px;
+    /* To make the header uncovered parts invisible */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+}
+
+/* Target the header and give a fixed positon at the top */
+body>header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Give more space to let the test appear */
+main {
+    padding-top: 100px;
+}
+
+/* Reduce motion set-up */
+@media screen and (prefers-reduced-motion: reduce) {
+    .logo {
+        animation: none;
+    }
+}
+
+/* Print view set-up */
+@media print and (orientation: portrait) {
+    body {
+        font-family: Arial, Helvetica;
+        background-image: none;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .pricing {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .card {
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+    }
+    .gallery {
+        display: none;
+    }
+}
+
+ /* Add content to the end of second li of card */
+.card li:nth-child(2):after {
+    content: "👍";
+    margin-left: 10px;
+}
+
+
